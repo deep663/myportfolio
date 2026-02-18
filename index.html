@@ -1,0 +1,598 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Deep Senchowa – Full Stack Developer</title>
+        <meta name="description" content="Full Stack & Backend Developer skilled in React, Next.js, Node.js, Express, and MongoDB." />
+        <link
+            rel="shortcut icon"
+            href="./assets/favicon.ico"
+            type="image/x-icon"
+        />
+
+        <!-- Open Graph -->
+        <meta property="og:title" content="Deep Senchowa – Full Stack Developer" />
+        <meta property="og:description" content="Full Stack & Backend Developer skilled in React, Next.js, Node.js, Express, and MongoDB." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://github.com/deep663" />
+
+        <link rel="stylesheet" href="./css/tailwind-build.css" />
+        <link rel="stylesheet" href="css/index.css" />
+
+        <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/icon?family=Material+Icons"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css"
+            integrity="sha512-dPXYcDub/aeb08c63jRq/k6GaKccl256JQy/AnOq7CAnEZ9FzSL9wSbcZkMp4R26vBsMLFYH4kQ67/bbV8XaCQ=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"/>
+    </head>
+    <body
+        class="tw-flex tw-min-h-[100vh] tw-flex-col tw-bg-[#fff] tw-font-mono"
+    >
+        <!-- ─── HEADER ──────────────────────────────────────────────── -->
+        <header
+            class="tw-absolute tw-top-0 tw-z-20 tw-flex tw-h-[60px] tw-w-full tw-bg-opacity-0 tw-px-[5%] max-lg:tw-mr-auto max-lg:tw-px-4 lg:tw-justify-around"
+        >
+            <a class="tw-h-[50px] tw-p-[4px] tw-text-2xl tw-font-medium" href="">
+                Deep.S
+            </a>
+            <div
+                class="collapsible-header animated-collapse max-lg:tw-shadow-md"
+                id="collapsed-header-items"
+            >
+                <div
+                    class="tw-flex tw-h-full tw-w-max tw-gap-5 tw-text-base tw-text-black max-lg:tw-mt-[30px] max-lg:tw-flex-col max-lg:tw-place-items-end max-lg:tw-gap-5 lg:tw-mx-auto lg:tw-place-items-center"
+                >
+                    <a class="header-links" href="#about"> About Me </a>
+                    <a class="header-links" href="#projects"> Projects </a>
+                    <a class="header-links" href="#experience"> Experience </a>
+                    <a class="header-links" href="#contact"> Contact </a>
+                </div>
+                <div
+                    class="tw-mx-4 tw-flex tw-place-items-center tw-gap-[20px] tw-text-base max-md:tw-w-full max-md:tw-flex-col max-md:tw-place-content-center"
+                >
+                    <a
+                        href="mailto:deepsenchowa1@gmail.com"
+                        aria-label="contact"
+                        class="tw-flex tw-h-[40px] tw-place-items-center tw-gap-2 tw-rounded-full tw-bg-black tw-p-1 tw-pl-4 tw-text-white"
+                    >
+                        <span>Get in touch</span>
+                        <div
+                            class="tw-flex tw-h-[30px] tw-w-[30px] tw-place-content-center tw-place-items-center tw-rounded-full tw-bg-white tw-font-semibold tw-text-black"
+                        >
+                            <i class="bi bi-arrow-up-right"></i>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <button
+                class="bi bi-list tw-absolute tw-right-3 tw-top-3 tw-z-50 tw-text-3xl tw-text-black lg:tw-hidden"
+                onclick="toggleHeader()"
+                aria-label="menu"
+                id="collapse-btn"
+            ></button>
+        </header>
+
+        <!-- ─── HERO ───────────────────────────────────────────────── -->
+        <section
+            id="about"
+            class="tw-relative tw-flex tw-min-h-[100vh] tw-w-full tw-max-w-[100vw] tw-flex-col tw-overflow-hidden max-lg:tw-p-4 max-md:tw-mt-[50px]"
+        >
+            <div
+                class="tw-flex tw-h-full tw-min-h-[100vh] tw-w-full tw-place-content-center tw-gap-6 tw-p-[5%] max-xl:tw-place-items-center max-lg:tw-flex-col"
+            >
+                <div class="tw-flex tw-flex-col tw-place-content-center">
+                    <div
+                        class="tw-flex tw-flex-wrap tw-text-7xl tw-font-semibold tw-uppercase tw-leading-[85px] max-lg:tw-text-4xl max-md:tw-leading-snug"
+                    >
+                        <span class="reveal-hero-text tw-bg-green-200 tw-p-1 tw-px-6">
+                            Deep
+                        </span>
+                        <br />
+                        <span class="reveal-hero-text tw-bg-purple-100 tw-p-1 tw-px-6">
+                            Senchowa
+                        </span>
+                        <br>
+                        <span class="reveal-hero-text">Full Stack. Backend Dev</span>
+                    </div>
+                    <div
+                        class="reveal-hero-text tw-mt-2 tw-max-w-[450px] tw-p-2 tw-text-justify max-lg:tw-max-w-full"
+                    >
+                        Full Stack and Backend Developer with hands-on experience building
+                        scalable web applications using React, Next.js, Node.js, Express.js,
+                        and MongoDB. Strong in REST API design, authentication systems, and backend architecture.
+                    </div>
+
+                    <!-- Tech pills -->
+                    <div class="reveal-hero-text tw-mt-3 tw-flex tw-flex-wrap tw-gap-4 tw-p-2 tw-place-items-center">
+                        <i class="devicon-react-original tw-text-4xl" style="color:black" title="React"></i>
+                        <i class="devicon-nextjs-plain tw-text-4xl" style="color:black" title="Next.js"></i>
+                        <i class="devicon-nodejs-plain-wordmark tw-text-4xl" style="color:black" title="Node.js"></i>
+                        <i class="devicon-mongodb-plain tw-text-4xl" style="color:black" title="MongoDB"></i>
+                        <i class="devicon-mysql-plain tw-text-4xl" style="color:black" title="MySQL"></i>
+                        <i class="devicon-python-plain tw-text-4xl" style="color:black" title="Python"></i>
+                    </div>
+
+                    <div
+                        class="reveal-hero-text tw-mt-4 tw-flex tw-place-items-center tw-gap-4 tw-overflow-hidden tw-p-2"
+                    >
+                        <a
+                            href="mailto:deepsenchowa1@gmail.com"
+                            aria-label="contact"
+                            class="tw-flex tw-h-[40px] tw-place-items-center tw-gap-2 tw-rounded-full tw-border-[1px] tw-border-solid tw-border-black tw-bg-white tw-p-1 tw-pl-4 tw-text-black tw-transition-colors tw-duration-[0.5s] hover:tw-bg-black hover:tw-text-white"
+                        >
+                            <span>Get in touch</span>
+                            <div
+                                class="tw-flex tw-h-[30px] tw-w-[30px] tw-place-content-center tw-place-items-center tw-rounded-full tw-bg-black tw-font-semibold tw-text-white"
+                            >
+                                <i class="bi bi-arrow-up-right"></i>
+                            </div>
+                        </a>
+                        <a
+                            href="https://github.com/deep663"
+                            target="_blank"
+                            aria-label="github"
+                            class="tw-flex tw-h-[40px] tw-place-items-center tw-gap-2 tw-rounded-full tw-border-[1px] tw-border-solid tw-border-black tw-bg-white tw-p-1 tw-pl-4 tw-text-black tw-transition-colors tw-duration-[0.5s] hover:tw-bg-black hover:tw-text-white"
+                        >
+                            <span>GitHub</span>
+                            <div
+                                class="tw-flex tw-h-[30px] tw-w-[30px] tw-place-content-center tw-place-items-center tw-rounded-full tw-bg-black tw-font-semibold tw-text-white"
+                            >
+                                <i class="bi bi-github"></i>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div
+                    class="tw-flex tw-w-full tw-max-w-[50%] tw-place-content-center tw-place-items-center tw-overflow-hidden max-lg:tw-max-w-[unset]"
+                >
+                    <div
+                        class="tw-relative tw-flex tw-max-h-[580px] tw-min-h-[450px] tw-min-w-[350px] tw-max-w-[650px] tw-overflow-hidden max-lg:tw-h-fit max-lg:tw-max-h-[320px] max-lg:tw-min-h-[180px] max-lg:tw-w-[320px] max-lg:tw-min-w-[320px]"
+                    >
+                        <img
+                            src="./assets/images/home/profile.png"
+                            alt="profile"
+                            class="reveal-hero-img tw-z-[1] tw-h-full tw-w-full tw-object-contain"
+                        />
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ─── PROJECTS ───────────────────────────────────────────── -->
+        <section
+            id="projects"
+            class="tw-relative tw-flex tw-min-h-[100vh] tw-w-full tw-max-w-[100vw] tw-flex-col tw-place-items-center tw-overflow-hidden tw-p-6 tw-py-5"
+        >
+            <h3 class="reveal-up tw-text-6xl tw-font-medium max-lg:tw-text-3xl">
+                Projects
+            </h3>
+            <div class="reveal-up tw-my-4 tw-h-[1px] tw-w-[80%] tw-bg-black"></div>
+            <div
+                class="tw-mt-8 tw-gap-10 tw-space-y-8 max-md:tw-columns-1 lg:tw-columns-2 xl:tw-columns-3"
+            >
+                <!-- EVA -->
+                <div
+                    class="reveal-up tw-flex tw-h-fit tw-w-[450px] tw-break-inside-avoid tw-flex-col tw-gap-2 tw-rounded-lg tw-bg-[#f3f3f3b4] tw-p-4 tw-shadow-lg max-lg:tw-w-full max-lg:tw-max-w-[400px]"
+                >
+                    <div class="tw-h-[220px] tw-w-full tw-overflow-hidden tw-rounded-lg tw-bg-[#f3f3f3b4] tw-flex tw-place-content-center tw-place-items-center inset-well">
+                        <div class="tw-text-center tw-p-6">
+                            <i class="bi bi-robot tw-text-6xl tw-text-green-700 floating-icon"></i>
+                            <p class="tw-mt-3 tw-text-green-700 tw-text-lg tw-font-semibold floating-text">AI Personal Assistant</p>
+                        </div>
+                    </div>
+                    <div class="tw-flex tw-flex-col tw-gap-2">
+                        <h3 class="tw-text-xl tw-font-medium">EVA – AI Personal Assistant</h3>
+                        <div class="tw-flex tw-flex-wrap tw-gap-1">
+                            <span class="tw-rounded tw-bg-green-100 tw-px-2 tw-py-0.5 tw-text-xs">Python</span>
+                            <span class="tw-rounded tw-bg-green-100 tw-px-2 tw-py-0.5 tw-text-xs">LangChain</span>
+                            <span class="tw-rounded tw-bg-green-100 tw-px-2 tw-py-0.5 tw-text-xs">LangGraph</span>
+                        </div>
+                        <p class="tw-text-gray-600">
+                            CLI-based AI assistant with long-term and short-term memory,
+                            persistent storage, and a modular tool-based architecture for easy extensibility.
+                        </p>
+                        <a href="https://github.com/deep663/ai-pa-v1" target="_blank" class="tw-mt-4">
+                            <span>View on GitHub</span>
+                            <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- VideoTube -->
+                <div
+                    class="reveal-up tw-flex tw-h-fit tw-w-[450px] tw-break-inside-avoid tw-flex-col tw-gap-2 tw-rounded-lg tw-bg-[#f3f3f3b4] tw-p-4 tw-shadow-lg max-lg:tw-w-full max-lg:tw-max-w-[400px]"
+                >
+                    <div class="tw-h-[220px] tw-w-full tw-overflow-hidden tw-rounded-lg tw-bg-[#f3f3f3b4] tw-flex tw-place-content-center tw-place-items-center inset-well">
+                        <div class="tw-text-center tw-p-6">
+                            <i class="bi bi-play-circle-fill tw-text-6xl tw-text-red-700 floating-icon"></i>
+                            <p class="tw-mt-3 tw-text-red-700 tw-text-lg tw-font-semibold floating-text">Video Sharing Platform</p>
+                        </div>
+                    </div>
+                    <div class="tw-flex tw-flex-col tw-gap-2">
+                        <h3 class="tw-text-xl tw-font-medium">VideoTube Backend</h3>
+                        <div class="tw-flex tw-flex-wrap tw-gap-1">
+                            <span class="tw-rounded tw-bg-blue-100 tw-px-2 tw-py-0.5 tw-text-xs">Node.js</span>
+                            <span class="tw-rounded tw-bg-blue-100 tw-px-2 tw-py-0.5 tw-text-xs">Express</span>
+                            <span class="tw-rounded tw-bg-blue-100 tw-px-2 tw-py-0.5 tw-text-xs">MongoDB</span>
+                            <span class="tw-rounded tw-bg-blue-100 tw-px-2 tw-py-0.5 tw-text-xs">JWT</span>
+                        </div>
+                        <p class="tw-text-gray-600">
+                            Scalable backend for a video-sharing platform with JWT auth,
+                            video uploads, comments, likes, subscriptions, and full Mongoose schema design.
+                        </p>
+                        <a href="https://github.com/deep663/VideoTube" target="_blank" class="tw-mt-4">
+                            <span>View on GitHub</span>
+                            <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Academic Management -->
+                <div
+                    class="reveal-up tw-flex tw-h-fit tw-w-[450px] tw-break-inside-avoid tw-flex-col tw-gap-2 tw-rounded-lg tw-bg-[#f3f3f3b4] tw-p-4 tw-shadow-lg max-lg:tw-w-full max-lg:tw-max-w-[400px]"
+                >
+                    <div class="tw-h-[220px] tw-w-full tw-overflow-hidden tw-rounded-lg tw-bg-[#f3f3f3b4] tw-flex tw-place-content-center tw-place-items-center inset-well">
+                        <div class="tw-text-center tw-p-6">
+                            <i class="bi bi-mortarboard-fill tw-text-6xl tw-text-yellow-700 floating-icon"></i>
+                            <p class="tw-mt-3 tw-text-yellow-700 tw-text-lg tw-font-semibold floating-text">MERN Stack App</p>
+                        </div>
+                    </div>
+                    <div class="tw-flex tw-flex-col tw-gap-2">
+                        <h3 class="tw-text-xl tw-font-medium">Academic Management System</h3>
+                        <div class="tw-flex tw-flex-wrap tw-gap-1">
+                            <span class="tw-rounded tw-bg-yellow-100 tw-px-2 tw-py-0.5 tw-text-xs">React</span>
+                            <span class="tw-rounded tw-bg-yellow-100 tw-px-2 tw-py-0.5 tw-text-xs">Tailwind CSS</span>
+                            <span class="tw-rounded tw-bg-yellow-100 tw-px-2 tw-py-0.5 tw-text-xs">Express</span>
+                            <span class="tw-rounded tw-bg-yellow-100 tw-px-2 tw-py-0.5 tw-text-xs">MongoDB</span>
+                        </div>
+                        <p class="tw-text-gray-600">
+                            Full-stack academic management app with authentication, CRUD operations,
+                            and a responsive React + Tailwind UI backed by Express and MongoDB.
+                        </p>
+                        <a href="https://github.com/deep663/ccsa-academin-2.0" target="_blank" class="tw-mt-4">
+                            <span>View on GitHub</span>
+                            <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Contact Management API -->
+                <div
+                    class="reveal-up tw-flex tw-h-fit tw-w-[450px] tw-break-inside-avoid tw-flex-col tw-gap-2 tw-rounded-lg tw-bg-[#f3f3f3b4] tw-p-4 tw-shadow-lg max-lg:tw-w-full max-lg:tw-max-w-[400px]"
+                >
+                    <div class="tw-h-[220px] tw-w-full tw-overflow-hidden tw-rounded-lg tw-bg-[#f3f3f3b4] tw-flex tw-place-content-center tw-place-items-center inset-well">
+                        <div class="tw-text-center tw-p-6">
+                            <i class="bi bi-person-lines-fill tw-text-6xl tw-text-purple-700 floating-icon"></i>
+                            <p class="tw-mt-3 tw-text-purple-700 tw-text-lg tw-font-semibold floating-text">REST API</p>
+                        </div>
+                    </div>
+                    <div class="tw-flex tw-flex-col tw-gap-2">
+                        <h3 class="tw-text-xl tw-font-medium">Contact Management API</h3>
+                        <div class="tw-flex tw-flex-wrap tw-gap-1">
+                            <span class="tw-rounded tw-bg-purple-100 tw-px-2 tw-py-0.5 tw-text-xs">Node.js</span>
+                            <span class="tw-rounded tw-bg-purple-100 tw-px-2 tw-py-0.5 tw-text-xs">Express</span>
+                            <span class="tw-rounded tw-bg-purple-100 tw-px-2 tw-py-0.5 tw-text-xs">JWT</span>
+                            <span class="tw-rounded tw-bg-purple-100 tw-px-2 tw-py-0.5 tw-text-xs">bcrypt</span>
+                        </div>
+                        <p class="tw-text-gray-600">
+                            Secure multi-tenant RESTful API with full CRUD, JWT auth, bcrypt hashing,
+                            custom error-handling middleware, and Mongoose schema validation.
+                        </p>
+                        <a href="https://github.com/deep663/My-contacats-server" target="_blank" class="tw-mt-4">
+                            <span>View on GitHub</span>
+                            <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Job Finder -->
+                <div
+                    class="reveal-up tw-flex tw-h-fit tw-w-[450px] tw-break-inside-avoid tw-flex-col tw-gap-2 tw-rounded-lg tw-bg-[#f3f3f3b4] tw-p-4 tw-shadow-lg max-lg:tw-w-full max-lg:tw-max-w-[400px]"
+                >
+                    <div class="tw-h-[220px] tw-w-full tw-overflow-hidden tw-rounded-lg tw-bg-[#f3f3f3b4] tw-flex tw-place-content-center tw-place-items-center inset-well">
+                        <div class="tw-text-center tw-p-6">
+                            <i class="bi bi-briefcase-fill tw-text-6xl tw-text-cyan-700 floating-icon"></i>
+                            <p class="tw-mt-3 tw-text-cyan-700 tw-text-lg tw-font-semibold floating-text">Data Scraping Tool</p>
+                        </div>
+                    </div>
+                    <div class="tw-flex tw-flex-col tw-gap-2">
+                        <h3 class="tw-text-xl tw-font-medium">Job Finder</h3>
+                        <div class="tw-flex tw-flex-wrap tw-gap-1">
+                            <span class="tw-rounded tw-bg-cyan-100 tw-px-2 tw-py-0.5 tw-text-xs">Python</span>
+                            <span class="tw-rounded tw-bg-cyan-100 tw-px-2 tw-py-0.5 tw-text-xs">Selenium</span>
+                            <span class="tw-rounded tw-bg-cyan-100 tw-px-2 tw-py-0.5 tw-text-xs">BeautifulSoup</span>
+                            <span class="tw-rounded tw-bg-cyan-100 tw-px-2 tw-py-0.5 tw-text-xs">pandas</span>
+                        </div>
+                        <p class="tw-text-gray-600">
+                            Automated job scraping tool using Selenium and BeautifulSoup,
+                            with data analysis via pandas and CSV export.
+                        </p>
+                        <a href="https://github.com/deep663/Job_finder" target="_blank" class="tw-mt-4">
+                            <span>View on GitHub</span>
+                            <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ─── WORK EXPERIENCE ────────────────────────────────────── -->
+        <section
+            id="experience"
+            class="tw-relative tw-mt-10 tw-flex tw-min-h-[100vh] tw-w-full tw-max-w-[100vw] tw-flex-col tw-place-content-center tw-place-items-center lg:tw-p-6"
+        >
+            <div
+                class="tw-flex tw-h-full tw-w-full tw-justify-around tw-gap-8 tw-rounded-xl tw-bg-[#e7e6e685] tw-p-4 max-lg:tw-max-w-full max-lg:tw-flex-col"
+            >
+                <div
+                    class="reveal-up tw-flex tw-h-full tw-w-[50%] tw-place-content-center max-lg:tw-w-full lg:tw-sticky lg:tw-top-[20%]"
+                >
+                    <h3 class="tw-text-center tw-text-6xl tw-font-medium max-lg:tw-text-3xl">
+                        Work Experience
+                    </h3>
+                </div>
+
+                <div
+                    class="reveal-up tw-flex tw-w-[30%] tw-flex-col tw-place-items-center tw-gap-4 tw-p-2 max-lg:tw-w-full"
+                >
+                    <!-- Vision Mentix -->
+                    <div class="tw-flex tw-h-fit tw-w-full tw-flex-col tw-gap-4 tw-border-2 tw-border-black tw-bg-white tw-p-4">
+                        <div class="tw-flex tw-w-full tw-place-items-center tw-gap-4 tw-p-2">
+                            <div class="tw-flex tw-h-[60px] tw-w-[60px] tw-shrink-0 tw-place-content-center tw-place-items-center tw-rounded-full tw-bg-green-200 tw-text-lg tw-font-bold tw-text-black">
+                                VMS
+                            </div>
+                            <div>
+                                <p class="tw-text-xl tw-font-semibold">Fullstack Developer</p>
+                                <p class="tw-text-lg tw-text-gray-600">Vision Mentix Software Pvt. Ltd.</p>
+                                <p class="tw-text-sm tw-text-gray-400">Nov 2025 – Present</p>
+                            </div>
+                        </div>
+                        <div class="tw-text-justify tw-text-gray-800">
+                            Developing scalable full-stack applications with Next.js, Node.js, Express, and
+                            MongoDB. Built responsive UI components, integrated REST APIs, and implemented
+                            secure authentication with role-based access control.
+                        </div>
+                    </div>
+
+                    <!-- IIT Guwahati -->
+                    <div class="tw-flex tw-h-fit tw-w-full tw-flex-col tw-gap-4 tw-border-2 tw-border-black tw-bg-white tw-p-4">
+                        <div class="tw-flex tw-w-full tw-place-items-center tw-gap-4 tw-p-2">
+                            <div class="tw-flex tw-h-[60px] tw-w-[60px] tw-shrink-0 tw-place-content-center tw-place-items-center tw-rounded-full tw-bg-blue-100 tw-text-lg tw-font-bold tw-text-black">
+                                IIT
+                            </div>
+                            <div>
+                                <p class="tw-text-xl tw-font-semibold">Project Fellow</p>
+                                <p class="tw-text-lg tw-text-gray-600">IIT Guwahati</p>
+                                <p class="tw-text-sm tw-text-gray-400">Jun 2025 – Sep 2025</p>
+                            </div>
+                        </div>
+                        <div class="tw-text-justify tw-text-gray-800">
+                            Research-oriented software development in hardware security. Implemented
+                            computational models and contributed to system-level problem solving.
+                        </div>
+                    </div>
+
+                    <!-- NIELIT -->
+                    <div class="tw-flex tw-h-fit tw-w-full tw-flex-col tw-gap-4 tw-border-2 tw-border-black tw-bg-white tw-p-4">
+                        <div class="tw-flex tw-w-full tw-place-items-center tw-gap-4 tw-p-2">
+                            <div class="tw-flex tw-h-[60px] tw-w-[60px] tw-shrink-0 tw-place-content-center tw-place-items-center tw-rounded-full tw-bg-yellow-300 tw-text-sm tw-font-bold tw-text-black">
+                                NIE
+                            </div>
+                            <div>
+                                <p class="tw-text-xl tw-font-semibold">Junior Faculty (IT)</p>
+                                <p class="tw-text-lg tw-text-gray-600">NIELIT</p>
+                                <p class="tw-text-sm tw-text-gray-400">Jan 2025 – Mar 2025</p>
+                            </div>
+                        </div>
+                        <div class="tw-text-justify tw-text-gray-800">
+                            Conducted practical sessions in programming and web development.
+                            Mentored students on logical thinking, algorithms, and real-world software practices.
+                        </div>
+                    </div>
+
+                    <!-- Gratia -->
+                    <div class="tw-flex tw-h-fit tw-w-full tw-flex-col tw-gap-4 tw-border-2 tw-border-black tw-bg-white tw-p-4">
+                        <div class="tw-flex tw-w-full tw-place-items-center tw-gap-4 tw-p-2">
+                            <div class="tw-flex tw-h-[60px] tw-w-[60px] tw-shrink-0 tw-place-content-center tw-place-items-center tw-rounded-full tw-bg-orange-300 tw-text-lg tw-font-bold tw-text-black">
+                                GT
+                            </div>
+                            <div>
+                                <p class="tw-text-xl tw-font-semibold">Software Developer</p>
+                                <p class="tw-text-lg tw-text-gray-600">Gratia Technology Pvt. Ltd.</p>
+                                <p class="tw-text-sm tw-text-gray-400">Jul 2024 – Feb 2025</p>
+                            </div>
+                        </div>
+                        <div class="tw-text-justify tw-text-gray-800">
+                            Developed full-stack web apps using React, Tailwind, Node.js, and MongoDB.
+                            Designed RESTful APIs with JWT auth, built admin dashboards, employee management
+                            systems, and worked on HRMS maintenance with Laravel.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ─── SKILLS ─────────────────────────────────────────────── -->
+        <section
+            class="tw-relative tw-flex tw-min-h-[80vh] tw-w-full tw-max-w-[100vw] tw-flex-col tw-place-content-center tw-place-items-center tw-overflow-hidden tw-p-6"
+        >
+            <div class="tw-mt-8 tw-flex tw-flex-col tw-place-items-center tw-gap-5">
+                <div class="reveal-up tw-mt-5 tw-flex tw-flex-col tw-gap-3 tw-text-center">
+                    <h2 class="tw-text-4xl tw-font-semibold">Technical Skills</h2>
+                </div>
+                <div
+                    class="tw-mt-6 tw-flex tw-max-w-[60%] tw-flex-wrap tw-place-content-center tw-gap-2 max-lg:tw-flex-col"
+                >
+                    <div class="reveal-up tw-flex tw-h-[150px] tw-w-[350px] tw-flex-col tw-gap-2 tw-p-4">
+                        <div class="tw-flex tw-gap-1">
+                            <i class="bi bi-layout-text-window-reverse tw-text-2xl"></i>
+                            <h3 class="tw-text-2xl tw-font-semibold">Frontend</h3>
+                        </div>
+                        <div class="tw-text-[#595959]">React.js, Next.js, Tailwind CSS, Vite, Shadcn UI</div>
+                    </div>
+                    <div class="reveal-up tw-flex tw-h-[150px] tw-w-[350px] tw-flex-col tw-gap-2 tw-p-4">
+                        <div class="tw-flex tw-gap-1">
+                            <i class="bi bi-server tw-text-2xl"></i>
+                            <h3 class="tw-text-2xl tw-font-semibold">Backend</h3>
+                        </div>
+                        <div class="tw-text-[#595959]">Node.js, Express.js, REST APIs, JWT Auth, Django, Flask</div>
+                    </div>
+                    <div class="reveal-up tw-flex tw-h-[150px] tw-w-[350px] tw-flex-col tw-gap-2 tw-p-4">
+                        <div class="tw-flex tw-gap-1">
+                            <i class="bi bi-database-fill tw-text-2xl"></i>
+                            <h3 class="tw-text-2xl tw-font-semibold">Databases</h3>
+                        </div>
+                        <div class="tw-text-[#595959]">MongoDB, MySQL, PostgreSQL, Mongoose ODM</div>
+                    </div>
+                    <div class="reveal-up tw-flex tw-h-[150px] tw-w-[350px] tw-flex-col tw-gap-2 tw-p-4">
+                        <div class="tw-flex tw-gap-1">
+                            <i class="bi bi-code-slash tw-text-2xl"></i>
+                            <h3 class="tw-text-2xl tw-font-semibold">Languages</h3>
+                        </div>
+                        <div class="tw-text-[#595959]">JavaScript (ES6+), Python, C++, SQL</div>
+                    </div>
+                    <div class="reveal-up tw-flex tw-h-[150px] tw-w-[350px] tw-flex-col tw-gap-2 tw-p-4">
+                        <div class="tw-flex tw-gap-1">
+                            <i class="bi bi-tools tw-text-2xl"></i>
+                            <h3 class="tw-text-2xl tw-font-semibold">Tools</h3>
+                        </div>
+                        <div class="tw-text-[#595959]">Git, GitHub Actions, Docker, AWS (Basics), Postman, Linux</div>
+                    </div>
+                    <div class="reveal-up tw-flex tw-h-[150px] tw-w-[350px] tw-flex-col tw-gap-2 tw-p-4">
+                        <div class="tw-flex tw-gap-1">
+                            <i class="bi bi-diagram-3-fill tw-text-2xl"></i>
+                            <h3 class="tw-text-2xl tw-font-semibold">Concepts</h3>
+                        </div>
+                        <div class="tw-text-[#595959]">Data Structures &amp; Algorithms, REST API Design, Auth Systems</div>
+                    </div>
+                </div>
+
+                <a
+                    href="mailto:deepsenchowa1@gmail.com"
+                    aria-label="contact"
+                    id="contact"
+                    class="reveal-up tw-flex tw-h-[40px] tw-place-items-center tw-gap-2 tw-rounded-full tw-bg-black tw-p-1 tw-pl-4 tw-text-white"
+                >
+                    <span>Get in touch</span>
+                    <div
+                        class="tw-flex tw-h-[30px] tw-w-[30px] tw-place-content-center tw-place-items-center tw-rounded-full tw-bg-white tw-font-semibold tw-text-black"
+                    >
+                        <i class="bi bi-arrow-up-right"></i>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <!-- ─── CERTIFICATIONS & EDUCATION ────────────────────────── -->
+        <section
+            class="tw-mt-5 tw-flex tw-w-full tw-flex-col tw-place-items-center tw-p-[2%] max-lg:tw-p-3"
+        >
+            <div class="reveal-up tw-mt-5 tw-flex tw-flex-col tw-gap-3 tw-text-center">
+                <h2 class="tw-text-4xl tw-font-semibold">Certifications &amp; Education</h2>
+            </div>
+            <div
+                class="reveal-up tw-mt-10 tw-flex tw-flex-wrap tw-place-content-center tw-gap-10 max-lg:tw-flex-col"
+            >
+                <!-- TCS NQT -->
+                <div
+                    class="tw-flex tw-h-[380px] tw-w-[350px] tw-flex-col tw-gap-2 tw-overflow-clip tw-rounded-lg tw-bg-[#edecec79] tw-p-4 tw-shadow-xl max-lg:tw-w-[300px]"
+                >
+                    <div class="tw-h-[160px] tw-w-full tw-overflow-hidden tw-rounded-md tw-bg-black tw-flex tw-place-content-center tw-place-items-center">
+                        <div class="tw-text-center tw-my-4">
+                            <i class="bi bi-patch-check-fill tw-text-5xl tw-text-green-300"></i>
+                            <p class="tw-text-green-200 tw-mt-2 tw-font-semibold">TCS NQT</p>
+                        </div>
+                    </div>
+                    <h3 class="tw-text-xl tw-font-semibold max-md:tw-text-lg">
+                        TCS National Qualifier Test (IT)
+                    </h3>
+                    <p class="tw-mt-1 tw-text-gray-600 tw-text-sm">
+                        Jan 2026 · Cognitive: 78.12% · Quant/Reasoning: 78.89% ·
+                        Programming (Python): <strong>100%</strong>
+                    </p>
+                </div>
+
+                <!-- Google Python -->
+                <div
+                    class="tw-flex tw-h-[380px] tw-w-[350px] tw-flex-col tw-gap-2 tw-overflow-clip tw-rounded-lg tw-bg-[#edecec79] tw-p-4 tw-shadow-xl max-lg:tw-w-[300px]"
+                >
+                    <div class="tw-h-[160px] tw-w-full tw-overflow-hidden tw-rounded-md tw-bg-[#1a1a2e] tw-flex tw-place-content-center tw-place-items-center">
+                        <div class="tw-text-center tw-my-4">
+                            <i class="bi bi-google tw-text-5xl tw-text-blue-300"></i>
+                            <p class="tw-text-blue-200 tw-mt-2 tw-font-semibold">Coursera / Google</p>
+                        </div>
+                    </div>
+                    <h3 class="tw-text-xl tw-font-semibold max-md:tw-text-lg">
+                        Crash Course on Python
+                    </h3>
+                    <p class="tw-mt-1 tw-text-gray-600 tw-text-sm">
+                        Google via Coursera · Foundations of Python programming
+                        and automation scripting.
+                    </p>
+                </div>
+
+                <!-- B.Tech -->
+                <div
+                    class="tw-flex tw-h-[380px] tw-w-[350px] tw-flex-col tw-gap-2 tw-overflow-clip tw-rounded-lg tw-bg-[#edecec79] tw-p-4 tw-shadow-xl max-lg:tw-w-[300px]"
+                >
+                    <div class="tw-h-[160px] tw-w-full tw-overflow-hidden tw-rounded-md tw-bg-[#0f2027] tw-flex tw-place-content-center tw-place-items-center">
+                        <div class="tw-text-center tw-my-4">
+                            <i class="bi bi-mortarboard-fill tw-text-5xl tw-text-yellow-300"></i>
+                            <p class="tw-text-yellow-200 tw-mt-2 tw-font-semibold">Dibrugarh University</p>
+                        </div>
+                    </div>
+                    <h3 class="tw-text-xl tw-font-semibold max-md:tw-text-lg">
+                        B.Tech – Computer Science &amp; Engineering
+                    </h3>
+                    <p class="tw-mt-1 tw-text-gray-600 tw-text-sm">
+                        Dibrugarh University · 2020 – 2024 · CGPA: 7.78 / 10
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <hr class="tw-mt-4" />
+
+        <!-- ─── FOOTER ─────────────────────────────────────────────── -->
+        <footer
+            class="tw-mt-auto tw-flex tw-min-h-[100px] tw-w-full tw-place-content-around tw-place-items-center tw-gap-3 tw-p-[2%] tw-px-[10%] tw-text-black max-md:tw-flex-col"
+        >
+            <p class="tw-text-sm tw-text-gray-500">deepsenchowa1@gmail.com · +91-9954709932</p>
+            <div class="tw-flex tw-gap-6 tw-text-2xl">
+                <a href="https://github.com/deep663" target="_blank" aria-label="Github">
+                    <i class="bi bi-github"></i>
+                </a>
+                <a href="https://linkedin.com/in/deepsenchowa" target="_blank" aria-label="LinkedIn">
+                    <i class="bi bi-linkedin"></i>
+                </a>
+                <a href="mailto:deepsenchowa1@gmail.com" aria-label="Email">
+                    <i class="bi bi-envelope-fill"></i>
+                </a>
+            </div>
+        </footer>
+    </body>
+
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.0/gsap.min.js"
+        integrity="sha512-B1lby8cGcAUU3GR+Fd809/ZxgHbfwJMp0jLTVfHiArTuUt++VqSlJpaJvhNtRf3NERaxDNmmxkdx2o+aHd4bvw=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+    ></script>
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.0/ScrollTrigger.min.js"
+        integrity="sha512-AY2+JxnBETJ0wcXnLPCcZJIJx0eimyhz3OJ55k2Jx4RtYC+XdIi2VtJQ+tP3BaTst4otlGG1TtPJ9fKrAUnRdQ=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+    ></script>
+
+    <script src="./index.js"></script>
+</html>
