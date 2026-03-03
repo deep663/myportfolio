@@ -566,6 +566,13 @@ header > .collapsible-header{
     animation: load 1.8s ease forwards;
 }
 
+@media (max-width: 480px) {
+    #hero-button {
+        font-size: 0.75rem;
+
+    }
+}
+
 @keyframes load {
     to { width: 100%; }
 }
