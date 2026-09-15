@@ -1,0 +1,46 @@
+{
+  "categories": [
+    {
+      "name": "Frontend",
+      "icon": "bi-layout-text-window-reverse",
+      "skills": ["React.js", "Next.js", "Tailwind CSS", "Vite", "Shadcn UI", "Electron"]
+    },
+    {
+      "name": "Backend",
+      "icon": "bi-server",
+      "skills": [
+        "Node.js",
+        "Express.js",
+        "REST APIs",
+        "JWT Auth",
+        "Django",
+        "Flask",
+        "FastAPI",
+        "Alembic",
+        "LangChain",
+        "LangGraph",
+        "Multi-Agent Orchestration"
+      ]
+    },
+    {
+      "name": "Databases",
+      "icon": "bi-database-fill",
+      "skills": ["MongoDB", "MySQL", "PostgreSQL", "Mongoose ODM", "Databricks", "Timbr (Semantic Layers)"]
+    },
+    {
+      "name": "Languages",
+      "icon": "bi-code-slash",
+      "skills": ["JavaScript (ES6+)", "Python", "C++", "SQL"]
+    },
+    {
+      "name": "Tools",
+      "icon": "bi-tools",
+      "skills": ["Git", "GitHub Actions", "Docker", "AWS (Basics)", "Postman", "Linux", "MCP / Claude Code Tooling"]
+    },
+    {
+      "name": "Concepts",
+      "icon": "bi-diagram-3-fill",
+      "skills": ["Data Structures & Algorithms", "REST API Design", "Auth Systems"]
+    }
+  ]
+}

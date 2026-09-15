@@ -1,0 +1,266 @@
+@import "tailwindcss";
+@import "bootstrap-icons/font/bootstrap-icons.css";
+@import "devicon/devicon.min.css";
+
+/*
+ * Global styles. Tailwind class names carry no legacy `tw-` prefix — the
+ * legacy `tailwind.config.js` prefix is dropped in the rebuild (per
+ * `02-nextjs-project-structure.md` §4, `06-risks-and-open-questions.md`
+ * A2). `.project-card*`/`.exp-card*` are ported selectively from
+ * `legacy-website/css/index.css` (still used by `ProjectCard.tsx`/
+ * `CertificationCard.tsx`); `#loader*`/`.reveal-hero-*`/`.reveal-up` and
+ * `.inset-well`/`.floating-*` are intentionally NOT ported — the former
+ * per ADR-001 (loader/GSAP dropped), the latter as confirmed-dead CSS
+ * (`03-legacy-migration-mapping.md` §4, risk A3 — no matching class
+ * anywhere in the new component tree).
+ *
+ * Design language: "monochrome by default, color on contact" — the site
+ * stays ink-on-paper at rest; an accent only ever appears in response to
+ * a hover/focus, the same move the Hero portrait already made with its
+ * grayscale -> color reveal (`components/sections/Hero.tsx`). The tokens
+ * below generalize that one photo trick into the site's interaction
+ * language instead of leaving it a one-off. `--accent-amber` is the
+ * global chrome accent (nav, CTAs); `--accent-green`/`--accent-cyan`
+ * rotate across content categories (skills, projects) so related cards
+ * don't all light up identically.
+ */
+
+:root {
+  --ink: #0f0f0f;
+  --paper: #ffffff;
+  --mist: #f2f0ea;
+  --accent-amber: #f5a623;
+  --accent-green: #2f9e6e;
+  --accent-cyan: #1f97ad;
+
+  --font-display: var(--font-space-grotesk), "Space Grotesk", system-ui, sans-serif;
+  --font-mono: var(--font-jetbrains-mono), "JetBrains Mono", ui-monospace, monospace;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-display);
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-display);
+  letter-spacing: -0.02em;
+}
+
+.header-links {
+  display: flex;
+  align-items: center;
+  min-width: fit-content;
+  border-radius: 25px;
+  padding: 5px 15px;
+  transition:
+    background-color 0.4s,
+    color 0.4s;
+}
+
+.header-links:hover {
+  background-color: var(--mist);
+  color: var(--accent-amber);
+}
+
+/* Project card — ported from legacy-website/css/index.css */
+.project-card {
+  background: var(--paper);
+  border: 2px solid var(--ink);
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 400px;
+  transition:
+    transform 0.18s ease,
+    box-shadow 0.18s ease;
+}
+.project-card:hover {
+  transform: translate(-3px, -3px);
+  box-shadow: 6px 6px 0px var(--ink);
+}
+.project-card-header {
+  background: var(--ink);
+  padding: 20px 20px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.project-card-header .proj-index {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: rgb(255 255 255 / 45%);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+.project-card-header .proj-icon {
+  font-size: 2rem;
+  color: #f3f3f3;
+  transition: color 0.4s ease;
+}
+.project-card-header .proj-title {
+  font-family: var(--font-mono);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.3;
+}
+.project-card-header .proj-type-badge {
+  display: inline-block;
+  border: 1px solid rgb(255 255 255 / 30%);
+  color: rgb(255 255 255 / 65%);
+  font-size: 10px;
+  font-family: var(--font-mono);
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  padding: 2px 8px;
+  width: fit-content;
+  transition:
+    color 0.4s ease,
+    border-color 0.4s ease;
+}
+.project-card-body {
+  padding: 16px 20px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  flex: 1;
+}
+.project-card-body p {
+  font-size: 0.82rem;
+  color: #444;
+  line-height: 1.6;
+  font-family: var(--font-mono);
+  margin: 0;
+}
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+.project-tag {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border: 1px solid var(--ink);
+  padding: 2px 8px;
+  color: var(--ink);
+  background: #eee;
+}
+.project-card-footer {
+  border-top: 2px solid #e0e0e0;
+  padding: 12px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.project-card-footer a {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--ink);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 700;
+}
+.project-card-footer a:hover {
+  text-decoration: underline;
+}
+.project-card-footer .arrow-box {
+  width: 24px;
+  height: 24px;
+  border: 1px solid var(--ink);
+  color: var(--ink);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  transition:
+    color 0.4s ease,
+    border-color 0.4s ease;
+}
+
+/* Per-card accent, set via ProjectCard's `data-accent` (rotates by
+   `project.order` so it's deterministic without hardcoding project names).
+   Monochrome at rest — the icon/badge/arrow only pick up color on hover,
+   same "color on contact" rule as everything else on the page. */
+.project-card[data-accent="amber"]:hover .proj-icon,
+.project-card[data-accent="amber"]:hover .arrow-box {
+  color: var(--accent-amber);
+}
+.project-card[data-accent="amber"]:hover .proj-type-badge {
+  color: var(--accent-amber);
+  border-color: var(--accent-amber);
+}
+.project-card[data-accent="amber"]:hover .arrow-box {
+  border-color: var(--accent-amber);
+}
+.project-card[data-accent="green"]:hover .proj-icon,
+.project-card[data-accent="green"]:hover .arrow-box {
+  color: var(--accent-green);
+}
+.project-card[data-accent="green"]:hover .proj-type-badge {
+  color: var(--accent-green);
+  border-color: var(--accent-green);
+}
+.project-card[data-accent="green"]:hover .arrow-box {
+  border-color: var(--accent-green);
+}
+.project-card[data-accent="cyan"]:hover .proj-icon,
+.project-card[data-accent="cyan"]:hover .arrow-box {
+  color: var(--accent-cyan);
+}
+.project-card[data-accent="cyan"]:hover .proj-type-badge {
+  color: var(--accent-cyan);
+  border-color: var(--accent-cyan);
+}
+.project-card[data-accent="cyan"]:hover .arrow-box {
+  border-color: var(--accent-cyan);
+}
+
+/* Experience/Certification card — ported from legacy-website/css/index.css */
+.exp-card {
+  background: var(--paper);
+  border: 2px solid var(--ink);
+  width: 100%;
+  max-width: 350px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  transition:
+    transform 0.18s ease,
+    box-shadow 0.18s ease;
+}
+.exp-card:hover {
+  transform: translate(-3px, -3px);
+  box-shadow: 6px 6px 0 var(--ink);
+}
+.exp-card-header {
+  height: 160px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.exp-card-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+.exp-card-desc {
+  font-size: 0.875rem;
+  color: #4b5563;
+}

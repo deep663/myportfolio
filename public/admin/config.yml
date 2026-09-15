@@ -1,0 +1,110 @@
+# STORY-4.1/4.2/4.3 — Decap CMS config (07-cms-architecture.md §2-3).
+#
+# `repo` and `base_url` are placeholders pending STORY-1.3 (Vercel deploy,
+# out of scope this session) confirming the production domain — `repo`
+# owner inferred from the GitHub username already used in
+# content/projects/*.mdx githubUrl fields (deep663); both values need a
+# final check against the real deployed domain/repo before first use.
+backend:
+  name: github
+  repo: deep663/deep-portfolio
+  branch: main
+  base_url: https://deep-portfolio.vercel.app
+  auth_endpoint: api/auth
+
+publish_mode: simple
+
+media_folder: "public/images/cms"
+public_folder: "/images/cms"
+
+collections:
+  - name: positioning
+    label: "Positioning"
+    file: content/site-copy.json
+    fields:
+      - { label: "Headline", name: headline, widget: string, required: true }
+      - { label: "Meta Title", name: metaTitle, widget: string, required: true }
+      - { label: "Meta Description", name: metaDescription, widget: text, required: true }
+      - label: "About Narrative"
+        name: aboutNarrative
+        widget: list
+        field: { label: Paragraph, name: paragraph, widget: text }
+        required: true
+
+  - name: skills
+    label: "Skills"
+    file: content/skills.json
+    fields:
+      - label: "Categories"
+        name: categories
+        widget: list
+        required: true
+        fields:
+          - label: "Category Name"
+            name: name
+            widget: select
+            options: [Frontend, Backend, Databases, Languages, Tools, Concepts]
+            required: true
+          - { label: "Icon", name: icon, widget: string, required: true }
+          - label: "Skills"
+            name: skills
+            widget: list
+            field: { label: Skill, name: skill, widget: string }
+            required: true
+
+  - name: experience
+    label: "Experience"
+    file: content/experience.json
+    fields:
+      - label: "Entries"
+        name: entries
+        widget: list
+        required: true
+        fields:
+          - { label: "Organization", name: org, widget: string, required: true }
+          - { label: "Role", name: role, widget: string, required: true }
+          - { label: "Badge", name: badge, widget: string, required: false }
+          - { label: "Start", name: start, widget: string, required: true }
+          - { label: "End", name: end, widget: string, required: true }
+          - { label: "Description", name: description, widget: text, required: true }
+
+  - name: certifications
+    label: "Certifications"
+    file: content/certifications.json
+    fields:
+      - label: "Entries"
+        name: entries
+        widget: list
+        required: true
+        fields:
+          - { label: "Issuer", name: issuer, widget: string, required: true }
+          - { label: "Header Background", name: headerBg, widget: string, required: true }
+          - { label: "Icon", name: icon, widget: string, required: true }
+          - { label: "Title", name: title, widget: string, required: true }
+          - { label: "Description", name: description, widget: text, required: true }
+
+  - name: projects
+    label: "Projects"
+    folder: content/projects
+    extension: mdx
+    create: true
+    slug: "{{fields.slug}}"
+    fields:
+      - { label: "Slug", name: slug, widget: string, required: true, hint: "URL segment, e.g. 'eva'" }
+      - { label: "Order", name: order, widget: number, required: true, hint: "Display order — EVA=1, VideoTube=2" }
+      - { label: "Title", name: title, widget: string, required: true }
+      - { label: "Category", name: category, widget: string, required: true, hint: "e.g. '01 / AI'" }
+      - { label: "Icon", name: icon, widget: string, required: true }
+      - { label: "Type", name: type, widget: string, required: true, hint: "e.g. 'CLI Tool', 'REST API'" }
+      - label: "Tags"
+        name: tags
+        widget: list
+        field: { label: Tag, name: tag, widget: string }
+        required: false
+      - { label: "Description", name: description, widget: text, required: true }
+      - { label: "GitHub URL", name: githubUrl, widget: string, required: true }
+      - label: "Case Study (optional)"
+        name: body
+        widget: markdown
+        required: false
+        hint: "Leave empty for a card-only project with no case-study page"

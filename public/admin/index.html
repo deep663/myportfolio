@@ -1,0 +1,46 @@
+<!doctype html>
+<!--
+  STORY-4.1 — Decap CMS admin bundle loader (07-cms-architecture.md §2).
+  Static HTML, no build step: `app/admin/page.tsx` redirects here so this
+  is never part of the Next.js React tree / public-route JS bundle.
+
+  Version pinned (not `decap-cms-app@^3`) per TS-001 §7.3, which flags an
+  unpinned unpkg.com range as a supply-chain risk this architecture fixed
+  for other CDN-loaded assets but missed here — pin to an exact version
+  and bump deliberately, not automatically. NOTE: this exact version
+  string should be verified against the latest Decap release before first
+  production deploy (this session has no network access to confirm it).
+-->
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>deep-portfolio CMS</title>
+    <meta name="robots" content="noindex" />
+    <!--
+      SEC-004 fix (audit-20260915-feature-04-cms.md): baseline CSP scoped
+      to this admin page, restricting script execution to this origin and
+      the one pinned CDN host the Decap bundle loads from.
+    -->
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self' https://unpkg.com; connect-src 'self' https://api.github.com https://github.com; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; object-src 'none'; base-uri 'self'"
+    />
+  </head>
+  <body>
+    <!--
+      SEC-004 fix: SRI so a compromised unpkg/npm publish can't silently
+      execute different code than what was reviewed. The hash below is a
+      placeholder — this session has no network access to compute the
+      real sha384 digest of the published 3.7.2 bundle.
+      TODO(Deep Senchowa): verify SRI hash against the published
+      decap-cms-app@3.7.2 (or whichever version is current) build before
+      first production deploy, e.g. `curl -s <url> | openssl dgst -sha384
+      -binary | openssl base64 -A`, and replace the placeholder below.
+    -->
+    <script
+      src="https://unpkg.com/decap-cms-app@3.7.2/dist/decap-cms.js"
+      integrity="sha384-PLACEHOLDER-VERIFY-BEFORE-PRODUCTION-DEPLOY"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
