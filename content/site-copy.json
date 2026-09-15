@@ -1,0 +1,10 @@
+{
+  "headline": "Backend & AI Systems Engineer — building agentic pipelines, semantic layers, and enterprise AI tooling",
+  "metaTitle": "Deep Senchowa – Backend & AI Systems Engineer",
+  "metaDescription": "Backend & AI Systems Engineer building agentic pipelines, semantic layers, and enterprise AI tooling with LangChain/LangGraph, FastAPI, and Node.js.",
+  "aboutNarrative": [
+    "I started out building full-stack MERN applications — React and Next.js front ends wired to Node.js/Express APIs backed by MongoDB — shipping authentication systems, admin dashboards, and REST APIs across roles at Gratia Technology, NIELIT, and Vision Mentix Software.",
+    "That backend foundation is what pulled me toward systems work: at IIT Guwahati I moved into research-oriented development on hardware-security tooling, and since joining TrieDatum Inc. as a Software Engineer I've been focused on production-grade AI solutions — Generative AI enablement, agentic pipelines, and the data architectures that let enterprise knowledge systems scale reliably.",
+    "Today that means LangChain/LangGraph multi-agent orchestration, FastAPI services backed by Alembic-managed schemas, MCP/Claude Code tooling, and semantic-layer work with Timbr and Databricks — built on the same REST API design and backend-architecture fundamentals I started with, applied to a different class of problem."
+  ]
+}

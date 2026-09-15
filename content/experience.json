@@ -1,0 +1,44 @@
+{
+  "entries": [
+    {
+      "org": "TrieDatum Inc.",
+      "role": "Software Engineer",
+      "badge": "TDI",
+      "start": "Apr 2026",
+      "end": "Present",
+      "description": "Contributing to the development of production-grade AI solutions, focusing on Generative AI enablement and building trusted enterprise knowledge systems. Implementing modern data architectures to scale AI capabilities for global clients."
+    },
+    {
+      "org": "Vision Mentix Software Pvt. Ltd.",
+      "role": "Fullstack Developer",
+      "badge": "VMS",
+      "start": "Nov 2025",
+      "end": "Apr 2026",
+      "description": "Developing scalable full-stack applications with Next.js, Node.js, Express, and MongoDB. Built responsive UI components, integrated REST APIs, and implemented secure authentication with role-based access control."
+    },
+    {
+      "org": "IIT Guwahati",
+      "role": "Project Fellow",
+      "badge": "IIT",
+      "start": "Jun 2025",
+      "end": "Sep 2025",
+      "description": "Research-oriented software development in hardware security. Implemented computational models and contributed to system-level problem solving."
+    },
+    {
+      "org": "NIELIT",
+      "role": "Junior Faculty (IT)",
+      "badge": "NIE",
+      "start": "Jan 2025",
+      "end": "Mar 2025",
+      "description": "Conducted practical sessions in programming and web development. Mentored students on logical thinking, algorithms, and real-world software practices."
+    },
+    {
+      "org": "Gratia Technology Pvt. Ltd.",
+      "role": "Software Developer",
+      "badge": "GT",
+      "start": "Jul 2024",
+      "end": "Feb 2025",
+      "description": "Developed full-stack web apps using React, Tailwind, Node.js, and MongoDB. Designed RESTful APIs with JWT auth, built admin dashboards, employee management systems, and worked on HRMS maintenance with Laravel."
+    }
+  ]
+}

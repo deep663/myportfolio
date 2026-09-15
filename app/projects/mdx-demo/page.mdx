@@ -1,0 +1,22 @@
+{/*
+  STORY-1.4 AC1 fixture — a sample .mdx file with prose and an embedded
+  code block, proving the MDX capability (ADR-003) renders correctly with
+  syntax highlighting via mdx-components.tsx's CodeBlock override. Not
+  linked from nav or any Project card (STORY-3.3 AC2 — no dangling links
+  to content that doesn't yet exist as a real case study).
+*/}
+
+# MDX capability demo
+
+This page proves that `.mdx` files under the project-pages route compile
+and render as part of the normal Next.js build, with embedded code blocks
+syntax-highlighted.
+
+```ts
+export function greet(name: string): string {
+  return `Hello, ${name}!`;
+}
+```
+
+No real case-study content exists yet (deferred per EPIC-01) — this file
+exists only to demonstrate the capability STORY-1.4 delivers.

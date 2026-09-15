@@ -1,0 +1,25 @@
+{
+  "entries": [
+    {
+      "issuer": "TCS NQT",
+      "headerBg": "#000000",
+      "icon": "bi-patch-check-fill",
+      "title": "TCS National Qualifier Test (IT)",
+      "description": "Jan 2026 · Cognitive: 78.12% · Quant/Reasoning: 78.89% · Programming (Python): 100%"
+    },
+    {
+      "issuer": "Coursera / Google",
+      "headerBg": "#1a1a2e",
+      "icon": "bi-google",
+      "title": "Crash Course on Python",
+      "description": "Google via Coursera · Foundations of Python programming and automation scripting."
+    },
+    {
+      "issuer": "Dibrugarh University",
+      "headerBg": "#0f2027",
+      "icon": "bi-mortarboard-fill",
+      "title": "B.Tech – Computer Science & Engineering",
+      "description": "Dibrugarh University · 2020 – 2024 · CGPA: 7.78 / 10"
+    }
+  ]
+}
